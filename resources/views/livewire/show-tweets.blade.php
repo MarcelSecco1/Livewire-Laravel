@@ -1,4 +1,4 @@
-<div>
+<div class="" style="color: white;">
     Show Tweets
     <p>{{$content}}</p>
 
@@ -19,4 +19,9 @@
     @foreach ($tweets as $tweet)
         {{$tweet->user->name}} - {{$tweet->content}} <br>
     @endforeach
+
+    <hr>
+    <div class="">
+        {{$tweets->links()}}
+    </div>
 </div>
