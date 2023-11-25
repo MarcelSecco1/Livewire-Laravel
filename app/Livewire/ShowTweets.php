@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class ShowTweets extends Component
 {
+    public $content = 'Apenas um teste';
+
     public function render()
     {
         $tweets = Tweet::with('user')->get();
@@ -19,5 +21,15 @@ class ShowTweets extends Component
         );
     }
 
-    public $message = 'Apenas um teste';
+
+
+    public function create()
+    {
+        Tweet::create([
+            'content' => $this->content,
+            'user_id' => 1
+        ]);
+
+        $this->content = '';
+    }
 }
