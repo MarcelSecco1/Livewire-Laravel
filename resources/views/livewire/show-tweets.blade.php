@@ -4,7 +4,7 @@
 
 
     <form method="post" wire:submit.prevent="create">
-        <input type="text" name="content" id="content" wire:model="content">
+        <input type="text" name="content" id="content" wire:model="content" style="color: black;">
         {{-- se existe um erro ele exibe a messagem do erro--}}
         @error('content')
             {{$message}}

@@ -22,9 +22,10 @@ class ShowTweets extends Component
 
     public function render()
     {
-        //retorna todos os tweets com a paginacao de 2 em 2
+        //retorna todos os tweets com a paginacao de 10 em 10
         // possui o relacionamento com o user usando o with
-        $tweets = Tweet::with('user')->paginate(2);
+        // pega os mais recentes tbm
+        $tweets = Tweet::with('user')->latest()->paginate(10);
 
         return view(
             'livewire.show-tweets',
@@ -43,10 +44,16 @@ class ShowTweets extends Component
         $this->validate();
 
         //metodo de criação de tweet
-        Tweet::create([
+        // Tweet::create([
+        //     'content' => $this->content,
+        //     'user_id' => auth()->user()->id,
+        // ]);
+
+        //metodo de criação de tweet
+        auth()->user()->tweets()->create([
             'content' => $this->content,
-            'user_id' => 1
         ]);
+
 
         //limpa o campo de tweet
         $this->content = '';
