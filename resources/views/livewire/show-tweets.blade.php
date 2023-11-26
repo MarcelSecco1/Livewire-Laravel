@@ -17,11 +17,15 @@
 
 
     @foreach ($tweets as $tweet)
+        @if ($tweet->user->profile_photo_path)
+            <img src="{{ url("storage/{$tweet->user->profile_photo_path}") }}" alt="imgPerfil">
+        @else
+            <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="imgPerfil">
+        @endif
         {{ $tweet->user->name }} - {{ $tweet->content }}
 
 
         @if ($tweet->likes->count())
-            
             <a href="#" wire:click.prevent="unlike({{ $tweet->id }})">Descurtir</a><br>
         @else
             <a href="#" wire:click.prevent="like({{ $tweet->id }})">Curtir</a> <br>
