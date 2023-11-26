@@ -13,7 +13,6 @@ class ShowTweets extends Component
     //cria a paginação
     use WithPagination;
 
-    public $content = 'Apenas um teste';
 
     //validações
     protected $rules = [
