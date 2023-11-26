@@ -1,4 +1,4 @@
-<div">
+<div>
     <h1 class="text-4xl py-6 font-bold h-24 text-white">Ver Tweets</h1>
 
 
