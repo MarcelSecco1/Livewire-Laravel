@@ -1,6 +1,6 @@
 
 <div>
-    <h1 class="text-4xl py-6 font-bold text-white">Atualizar Foto do Perfil</h1>
+    <h1 class="text-4xl py-6 font-bold text-white">Upload de Fotos</h1>
     <form wire:submit.prevent="storagePhoto" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-8 m-8">
         @if ($photo)
             <div class="mb-4">

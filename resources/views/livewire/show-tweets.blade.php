@@ -1,5 +1,5 @@
 <div">
-    <h1 class="text-4xl py-6 font-bold h-24 text-white">Tweets</h1>
+    <h1 class="text-4xl py-6 font-bold h-24 text-white">Ver Tweets</h1>
 
 
     <form method="post" wire:submit.prevent="create" class="shadow-md rounded px-8 pt-6 pb-8 mb-8">
