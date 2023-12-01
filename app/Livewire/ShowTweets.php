@@ -15,6 +15,8 @@ class ShowTweets extends Component
 
 
     //validações
+    public $content;
+
     protected $rules = [
         'content' => 'required|min:3|max:255'
     ];

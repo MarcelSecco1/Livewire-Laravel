@@ -3,7 +3,7 @@
 
 
     <form method="post" wire:submit.prevent="create" class="shadow-md rounded px-8 pt-6 pb-8 mb-8">
-        <textarea name="content" id="content" rows="3" placeholder="O que está pensando?" wire:model="content" cols="33"
+        <textarea name="content" id="content" rows="3" placeholder="O que está pensando?" wire:model="content"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('content') border-red-500 @enderror"></textarea>
         @error('content')
             {{-- se existe um erro ele exibe a messagem do erro --}}
